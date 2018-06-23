@@ -1,23 +1,19 @@
-package com.udacity.gradle.builditbigger;
+package com.planetpeopleplatform.androidlibrary;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-
-import com.planetpeopleplatform.androidlibrary.JokeActivity;
-import com.planetpeopleplatform.javajokelib.JavaJoke;
 
 
-public class MainActivity extends AppCompatActivity {
+public class JokeActivity extends AppCompatActivity {
+
+    public static String JOKE_KEY = "Joke key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_joke);
     }
 
 
@@ -43,13 +39,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void launchJokeActivity(View view) {
-        Intent intent = new Intent(this, JokeActivity.class);
-        JavaJoke javaJoke = new JavaJoke();
-        String joke = javaJoke.tellAJoke();
-        intent.putExtra(JokeActivity.JOKE_KEY, joke);
-        startActivity(intent);
-    }
+
 
 
 }
