@@ -36,6 +36,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     endpointsServer project(path: ':backend', configuration: 'endpoints')
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:support-annotations:27.1.1'
     implementation 'com.android.support:design:27.1.1'
@@ -51,4 +52,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation project(path: ':javajokelib')
     implementation project(path: ':androidlibrary')
+    endpointsServer project(path: ':backend', configuration: 'endpoints')
 }
