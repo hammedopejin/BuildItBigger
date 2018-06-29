@@ -22,7 +22,7 @@ public class MyEndpoint {
     @ApiMethod(name = "tellAJoke")
     public MyBean tellAJoke(@Named("joke") String joke) {
         MyBean response = new MyBean();
-        response.setData("Joke: " + joke);
+        response.setMyJoke(joke);
 
         return response;
     }
